@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Textarea Props
 
 name | type | default | description | required
@@ -8,7 +9,6 @@ name | type | default | description | required
 allowInputOverMax | Boolean | false | \- | N
 autofocus | Boolean | false | \- | N
 autosize | Boolean | false | \- | N
-bordered | Boolean | false | \- | N
 disabled | Boolean | false | \- | N
 indicator | Boolean | false | \- | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N

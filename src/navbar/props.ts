@@ -23,18 +23,15 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 首页图标。值为 true 表示显示默认返回图标，值为 false 表示不显示首页图标，值为其他表示自定义图标 */
-  homeIcon: {
-    type: [Boolean, Function] as PropType<TdNavbarProps['homeIcon']>,
+  /** 左侧区域。值为 `string` 表示文本，为其他表示自定义内容 */
+  left: {
+    type: [String, Function] as PropType<TdNavbarProps['left']>,
   },
-  /** 左侧图标。值为 true 表示显示默认返回图标，值为 false 表示不显示左侧图标，值为其他表示自定义图标 */
-  leftIcon: {
-    type: [Boolean, Function] as PropType<TdNavbarProps['leftIcon']>,
-    default: false,
-  },
-  /** 右侧图标，可自定义 */
-  rightIcon: {
-    type: Function as PropType<TdNavbarProps['rightIcon']>,
+  /** 是否显示左侧箭头 */
+  leftArrow: Boolean,
+  /** 右侧区域。值为 `string` 表示文本，为其他表示自定义内容 */
+  right: {
+    type: [String, Function] as PropType<TdNavbarProps['right']>,
   },
   /** 页面标题 */
   title: {
@@ -49,8 +46,8 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 点击左侧按钮时触发 */
+  /** 点击左侧区域时触发 */
   onLeftClick: Function as PropType<TdNavbarProps['onLeftClick']>,
-  /** 点击右侧图标时触发 */
+  /** 点击右侧区域时触发 */
   onRightClick: Function as PropType<TdNavbarProps['onRightClick']>,
 };

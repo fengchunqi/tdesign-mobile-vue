@@ -17,7 +17,7 @@ export interface TdButtonProps {
    */
   content?: string | TNode;
   /**
-   * 是否禁用按钮
+   * 禁用状态
    * @default false
    */
   disabled?: boolean;
@@ -46,15 +46,24 @@ export interface TdButtonProps {
    */
   size?: SizeEnum;
   /**
+   * 右侧内容，可用于定义右侧图标
+   */
+  suffix?: TNode;
+  /**
    * 组件风格，依次为品牌色、危险色
    * @default default
    */
-  theme?: 'default' | 'primary' | 'danger';
+  theme?: 'default' | 'primary' | 'danger' | 'light';
+  /**
+   * 按钮类型
+   * @default button
+   */
+  type?: 'submit' | 'reset' | 'button';
   /**
    * 按钮形式，基础、线框、文字
    * @default base
    */
-  variant?: 'base' | 'outline' | 'text';
+  variant?: 'base' | 'outline' | 'dashed' | 'text';
   /**
    * 点击时触发
    */

@@ -14,7 +14,7 @@ export default {
   content: {
     type: [String, Function] as PropType<TdButtonProps['content']>,
   },
-  /** 是否禁用按钮 */
+  /** 禁用状态 */
   disabled: Boolean,
   /** 是否为幽灵按钮（镂空按钮） */
   ghost: Boolean,
@@ -39,8 +39,12 @@ export default {
     default: 'medium' as TdButtonProps['size'],
     validator(val: TdButtonProps['size']): boolean {
       if (!val) return true;
-      return ['small', 'medium', 'large'].includes(val);
+      return ['extra-small', 'small', 'medium', 'large'].includes(val);
     },
+  },
+  /** 右侧内容，可用于定义右侧图标 */
+  suffix: {
+    type: Function as PropType<TdButtonProps['suffix']>,
   },
   /** 组件风格，依次为品牌色、危险色 */
   theme: {
@@ -48,7 +52,16 @@ export default {
     default: 'default' as TdButtonProps['theme'],
     validator(val: TdButtonProps['theme']): boolean {
       if (!val) return true;
-      return ['default', 'primary', 'danger'].includes(val);
+      return ['default', 'primary', 'danger', 'light'].includes(val);
+    },
+  },
+  /** 按钮类型 */
+  type: {
+    type: String as PropType<TdButtonProps['type']>,
+    default: 'button' as TdButtonProps['type'],
+    validator(val: TdButtonProps['type']): boolean {
+      if (!val) return true;
+      return ['submit', 'reset', 'button'].includes(val);
     },
   },
   /** 按钮形式，基础、线框、文字 */
@@ -57,7 +70,7 @@ export default {
     default: 'base' as TdButtonProps['variant'],
     validator(val: TdButtonProps['variant']): boolean {
       if (!val) return true;
-      return ['base', 'outline', 'text'].includes(val);
+      return ['base', 'outline', 'dashed', 'text'].includes(val);
     },
   },
   /** 点击时触发 */

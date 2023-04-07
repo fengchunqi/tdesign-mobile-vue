@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Textarea Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -8,7 +9,6 @@
 allowInputOverMax | Boolean | false | 超出maxlength或maxcharacter之后是否还允许输入 | N
 autofocus | Boolean | false | 自动聚焦，拉起键盘 | N
 autosize | Boolean | false | 是否自动增高，值为 autosize 时，style.height 不生效 | N
-bordered | Boolean | false | 是否显示外边框 | N
 disabled | Boolean | false | 是否禁用文本框 | N
 indicator | Boolean | false | 显示文本计数器，如 0/140。当 maxlength < 0 && maxcharacter < 0 成立时， indicator无效 | N
 label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N

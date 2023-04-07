@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Checkbox Props
 
 name | type | default | description | required

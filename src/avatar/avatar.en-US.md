@@ -6,12 +6,12 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-ImageProps | Object | - | \- | N
 alt | String | - | show it when url is not valid | N
 badgeProps | Object | - | Typescript：`BadgeProps`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/avatar/type.ts) | N
 hideOnLoadFailed | Boolean | false | hide image when loading image failed | N
 icon | Slot / Function | - | use icon to fill。Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 image | String | - | images url | N
+imageProps | Object | - | \- | N
 shape | String | circle | shape。options：circle/round。Typescript：`ShapeEnum ` `type ShapeEnum = 'circle' \| 'round'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/avatar/type.ts) | N
 size | String | - | size | N
 onError | Function |  | Typescript：`() => void`<br/>trigger on image load failed | N

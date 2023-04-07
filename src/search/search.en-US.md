@@ -11,7 +11,7 @@ center | Boolean | false | \- | N
 clearable | Boolean | true | \- | N
 disabled | Boolean | - | \- | N
 focus | Boolean | false | \- | N
-leftIcon | Slot / Function | 'search' | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+leftIcon | String / Slot / Function | 'search' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 placeholder | String | '' | \- | N
 readonly | Boolean | false | \- | N
 shape | String | 'square' | options：square/round | N
@@ -31,7 +31,7 @@ name | params | description
 -- | -- | --
 action-click | `(context: { e: MouseEvent })` | \-
 blur | `(context: { value: string; e: FocusEvent })` | \-
-change | `(value: string, context: { e?: InputEvent \| MouseEvent })` | \-
+change | `(value: string, context: { trigger: 'input-change' \| 'option-click'; e?: InputEvent \| MouseEvent })` | \-
 clear | `(context: { e: MouseEvent })` | \-
 focus | `(context: { value: string; e: FocusEvent })` | \-
 search | `(context?: { value: string; trigger: 'submit' \| 'option-click' \| 'clear'; e?: InputEvent \| MouseEvent })` | \-
